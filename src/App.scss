@@ -1,0 +1,58 @@
+$black: rgb(69, 99, 108);
+$white: rgb(221, 215, 207);
+$cellSize: 84px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  width: calc($cellSize * 8);
+  height: calc($cellSize * 8);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  width: $cellSize;
+  height: $cellSize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+  }
+  &-black {
+    background-color: $black;
+  }
+  &-white {
+    background-color: $white;
+  }
+  &-selected {
+    background-color: burlywood;
+  }
+
+  &-cannock {
+    background-color: red;
+  }
+
+  .available {
+    border-radius: 50%;
+    background-color: rgb(129, 209, 129);
+    width: 12px;
+    height: 12px;
+  }
+}
